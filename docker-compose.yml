@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+  api: # Node.js App
+    container_name: node-api-redis
+    build: .
+    ports:
+      - "3000:3000" # Expose API port
+      - "9229:9229" # Expose Node process debug port (disable in production)
+    environment: # Set ENV vars
+     - REDIS_URL=redis://redis-app
+     - PORT=3000
+    volumes: # Attach local book data directory
+      - ./:/usr/src/app
+    command: npm run install-start
+  cache:
+    container_name: redis-app
+    image: redis
+    expose:
+      - 6379

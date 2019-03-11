@@ -1,0 +1,29 @@
+{
+  "name": "express-redis-docker",
+  "version": "1.0.0",
+  "description": "Express Redis Docker",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "install-start": "npm install && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harpreetkhalsagtbit/express-redis-docker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harpreetkhalsagtbit/express-redis-docker/issues"
+  },
+  "homepage": "https://github.com/harpreetkhalsagtbit/express-redis-docker#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "redis": "^2.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
