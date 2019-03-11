@@ -6,7 +6,6 @@ services:
     build: .
     ports:
       - "4000:4000" # Expose API port
-      - "9229:9229" # Expose Node process debug port (disable in production)
     environment: # Set ENV vars
      - REDIS_URL=redis://redis-app
      - PORT=3000
