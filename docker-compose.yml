@@ -11,7 +11,8 @@ services:
      - PORT=3000
     volumes: # Attach local book data directory
       - ./:/usr/src/app
-    command: npm run install-start
+      - /usr/src/app/node_modules
+    command: npm start
   cache:
     container_name: redis-app
     image: redis

@@ -8,7 +8,4 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install app dependencies
-# RUN npm install
-
-# Start app
-CMD [ "npm", "start" ]
+RUN npm install
